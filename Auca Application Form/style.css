@@ -1,0 +1,81 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 420px;
+    background-image: url(Assets/v882-kul-43-a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.mainbox{
+    margin-top: 20px;
+    background: #000000;
+    height: 680px;
+    width: 1300px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f1f1f1;
+}
+
+.signup{
+    margin-top: 10px; 
+    text-align: center;
+}
+
+.left{
+    float: left;
+    background: #ffffff;
+    height: 680px;
+    width: 50%;
+    border-radius: 18px 0px 0px 18px;
+}
+.right{
+    border-radius: 0px 19px 19px 0px;
+    float: right;
+    background-image: url(Assets/PXL_20230811_151842406.jpg);
+    background-size: cover;
+    height: 680px;
+    width: 50%;
+}
+
+input{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #9d9d9d;
+    border-style: solid;
+}
+
+.selectinput{
+    height: 35px;
+    width: 306px;
+    border-radius: 5px;
+    border-color: #9d9d9d;
+}
+
+.leftcontent{
+    height: 350px;
+    margin-left: 165px;
+    overflow: auto;
+}
+
+.button{
+    background-color: #f1f1f1;
+    width: 150px; 
+    height: 40px;
+    margin: 20px 240px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    border-color: #f1f1f1;
+}
+
+.aucalogo{
+    margin-top: 30px;
+    margin-left: 60px;
+}

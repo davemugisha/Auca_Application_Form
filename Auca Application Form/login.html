@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="icon" type="image/x-icon" href="Assets/logo.jpg">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script defer src='script.js'></script>
+</head>
+<body>
+    <div id="error"></div>
+    <div class="mainbox">
+    <form action="" method="GET">
+        <div class="left">
+            <img src="Assets/auca_logo.png" class="aucalogo">
+            <h2 class="signup">Sign Up</h2>
+            <h5 style="margin-top: -10px; text-align: center;">Welcome! Please Enter Your Details</h5>
+            <div class="leftcontent">
+                <div class="inputbox">
+                    <label for="firstname">First Name</label><br>
+                    <input type="text" required="required" id="firstname">
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="lastname">Last Name</label><br>
+                    <input type="text" required="required" id="lastname">
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="dob">Date of Birth</label><br>
+                    <input id="dob" type="date" required="required" style="width: 303px; height: 35px;">
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="gender">Gender</label><br>
+                    <select id="gender" type="text" required="required" class="selectinput">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="health">Health Status</label><br>
+                    <select id="health" type="text" required="required" class="selectinput">
+                        <option value="Excellent">Excellent</option>
+                        <option value="Good">Good</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="facul">Faculty</label><br>
+                    <select class="selectinput" id="slct1">
+                        <option>Choose a Faculty</option>
+                    </select>
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="depart">Department</label><br>
+                    <select class="selectinput" id="slct2">
+                    </select>
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="prog">Program</label><br>
+                    <select name="program" id="prog" class="selectinput">Choose Program
+                        <option>Day</option>
+                        <option>Evening</option>
+                    </select>
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="email">Email</label><br>
+                    <input id="email" type="email" required="required">
+                    <br><br>
+                </div>
+                <div class="inputbox">
+                    <label for="phone">Phone Number</label><br>
+                    <input id="phone" type="number" required="required">
+                    <br><br>
+                </div>
+            </div>
+            <input type="submit" value="Signup" class="button">
+            </div>
+        <div class="right">
+
+        </div>
+    </form>
+    </div>
+
+<script>
+let faculty = ["Information Technology", "Health Sciences", "Business Administration"];
+let it = ["BSc in Software Engineering", "BSc in Networks and Communication Systems", "BSc in Information Management"];
+let health_sciences = ["Bachelor of Science in Nursing", "Bachelor of Science in Midwifery"];
+let business_administration = ["BBA in Accounting", "BBA in Management", "BBA in Finance", "BBA in Marketing"];
+
+let slct1 = document.getElementById("slct1");
+let slct2 = document.getElementById("slct2");
+
+faculty.forEach(function addFaculty(item){
+    let option = document.createElement("option");
+    option.text = item;
+    option.value = item;
+    slct1.appendChild(option);
+});
+
+slct1.onchange = function () {
+    slct2.innerHtml = "<option></option>";
+    if (this.value == "Information Technology"){
+        addToSlct2(it);
+    }
+    if (this.value == "Health Sciences") {
+        addToSlct2(health_sciences);
+    }
+    if (this.value == "Business Administration") {
+        addToSlct2(business_administration);
+    }
+}
+
+function addToSlct2(arr){
+    arr.forEach(function (item){
+        let option = document.createElement("option");
+        option.text = item;
+        option.value = item;
+        slct2.appendChild(option);
+    });
+}
+
+</script>
+</body>
+</html>
